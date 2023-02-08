@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:12 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/31 18:02:02 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:21:57 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	lendst;
 	size_t	lensrc;
 	size_t	i;
-	size_t sep;
+	size_t	sep;
 
 	i = 0;
 	lendst = ft_strlen(dst);

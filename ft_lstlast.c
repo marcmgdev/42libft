@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 21:06:00 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/07 21:06:00 by marvin           ###   ########.fr       */
+/*   Updated: 2023/02/08 17:52:50 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while(lst != NULL && lst->next != NULL)
-        lst = lst ->next;
-    return (lst);
+	while (lst != NULL && lst->next != NULL)
+		lst = lst ->next;
+	return (lst);
 }

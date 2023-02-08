@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:06 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/01 11:48:40 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:22:33 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-

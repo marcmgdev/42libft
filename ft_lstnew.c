@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 18:36:00 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/07 18:36:00 by marvin           ###   ########.fr       */
+/*   Updated: 2023/02/08 17:47:36 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new;
+	t_list	*new;
 
 	new = (t_list *)malloc(sizeof(t_list));
-	if(!new)
+	if (!new)
 		return (NULL);
-	new->content=content;
+	new->content = content;
 	new->next = NULL;
 	return (new);
 }

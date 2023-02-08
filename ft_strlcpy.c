@@ -6,15 +6,15 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:15 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/27 12:00:30 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:20:52 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char * dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-unsigned int	cont;
+	unsigned int	cont;
 	unsigned int	idx;
 
 	cont = 0;
