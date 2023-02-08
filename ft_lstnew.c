@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 12:13:02 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/01 12:17:48 by mmiro-go         ###   ########.fr       */
+/*   Created: 2023/02/07 18:36:00 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/07 18:36:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+t_list	*ft_lstnew(void *content)
 {
-    char *str;
-    int n2;
+	t_list *new;
 
-    n2 = 1;
-    str = (int)malloc(sizeof(n));
-    if(!str)
-        return (NULL);
-    if(n < 0)
-        n2 *= n;
-    else
-       n2 += 48;
-    if(str)
-        *str = n2;
-    return (str);
+	new = (t_list *)malloc(sizeof(t_list));
+	if(!new)
+		return (NULL);
+	new->content=content;
+	new->next = NULL;
+	return (new);
 }

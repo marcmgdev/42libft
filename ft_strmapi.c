@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 12:13:02 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/01 12:17:48 by mmiro-go         ###   ########.fr       */
+/*   Created: 2023/02/06 21:08:35 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/06 21:08:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char *str;
-    int n2;
+	unsigned int i;
+	char *str;
 
-    n2 = 1;
-    str = (int)malloc(sizeof(n));
-    if(!str)
-        return (NULL);
-    if(n < 0)
-        n2 *= n;
-    else
-       n2 += 48;
-    if(str)
-        *str = n2;
-    return (str);
+	if(!(str = malloc(ft_strlen(s) + 1)));
+		return (NULL);
+	while(s[i])
+	{
+		str = f(i,s[i]);
+		i++;
+	}
+	str[i] = 0;
+	return (str);
 }
