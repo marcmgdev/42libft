@@ -6,17 +6,20 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:18 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/25 16:13:46 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:43:19 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+int	ft_strlen(const char *s)
 {
-	while (*s != '\0')
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		s++;
+	i++;
 	}
-	return (s);
+	return (i);
 }

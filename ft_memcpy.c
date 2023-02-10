@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:11:58 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/26 14:52:25 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:55:46 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
+	char	*cdst;
+	char	*csrc;
 
 	i = 0;
 	if (!dst || !src)
-		return (NULL);
-	while (i++ < n)
-		((char *)dst)[i] = ((char *)src)[i];
+		return (dst);
+	cdst = (char *)dst;
+	csrc = (char *)src;
+	while (i < n)
+	{
+		cdst[i] = csrc[i];
+		i++;
+	}
 	return (dst);
 }

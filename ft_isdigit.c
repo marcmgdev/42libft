@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:11:46 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/08 14:41:34 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:37:03 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int a)
 {
-	if (a >= 0 && a <= 9)
+	if (a >= 48 && a <= 57)
 		return (1);
 	else
 		return (0);

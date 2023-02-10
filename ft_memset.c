@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:03 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/08 15:06:59 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:53:33 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int		i;
-	char	*str;
+	size_t			i;
+	unsigned char	*str;
 
-str = (char *)b;
-i = 0;
-	while (i++ <= len)
-		str[i] = c;
-	return (str);
+	i = 0;
+	str = (unsigned char *)b;
+	while (i < len)
+	{
+	str[i] = (unsigned char)c;
+	i++;
+	}
+	return (b);
 }

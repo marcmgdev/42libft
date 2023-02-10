@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:12:00 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/27 12:42:25 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:58:55 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,28 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (!dst || !src)
-		return (NULL);
-	if (dst < src)
-		ft_memcpy(dst, src, len);
-	while (len)
+	size_t			i;
+	unsigned char	*a;
+	unsigned char	*b;
+
+	i = 0;
+	a = (unsigned char *)dst;
+	b = (unsigned char *)src;
+	if (a > b)
 	{
-		((char *)dst)[len] = ((char *)src)[len];
-		--len;
+		while (i < len)
+		{
+			a[len - 1] = b[len - 1];
+			len--;
+		}
 	}
+	else
+	{
+		while (i < len)
+		{
+			a[i] = b[i];
+			i++;
+		}
+	}
+	return (dst);
 }

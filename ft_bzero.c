@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:11:31 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/01/25 18:46:19 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:20:01 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	ft_bzero(void *s, size_t n)
 
 i = 0;
 str = (char *)s;
-	while (i++ < n)
+	while (i < n)
 	{
 	str[i] = 0;
+	i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 21:08:35 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/08 17:28:51 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:45:26 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	str = malloc(ft_strlen(s) + 1);
-	if (!str)
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
+	if (str == NULL)
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		str = f(i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	str[i] = 0;
+	str[i] = '\0';
 	return (str);
 }

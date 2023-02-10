@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:08:13 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/08 17:52:03 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/10 10:30:25 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 
 	i = 0;
 	if (!lst)
-		return (NULL);
+		return (i);
 	while (lst != NULL)
 	{
 		i++;
