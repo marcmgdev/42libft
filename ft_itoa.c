@@ -12,48 +12,55 @@
 
 #include "libft.h"
 
-static int	ft_digit_count(long int i)
+void	ft_nbr(long long n, int len, char *r)
 {
-	int	count;
 
-	count = 0;
-	if (i < 0)
+	while (n)
 	{
-		i *= -1;
-		count++;
+		r[len--] = 48 + (n % 10);
+		n /= 10;
 	}
-	while (i > 0)
+}
+
+int	ft_len(int n)
+{
+	int	c;
+
+	c = 0;
+	if (n < 0)
+		c++;
+	while (n)
 	{
-		i /= 10;
-		count++;
+		n /= 10;
+		c++;
 	}
-	return (count);
+	return (c);
 }
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	int			i;
-	long int	nb;
+	long long	nb;
+	int			len;
+	char		*r;
 
-	nb = n;
-	i = ft_digit_count(nb);
-	str = malloc(i * sizeof(char) + 1);
-	if (!str)
-		return (0);
-	str[i--] = 0;
-	if (nb == 0)
+	len = ft_len(n);
+	if (!len)
 	{
-		str = ft_calloc(2, sizeof(char));
-		str[0] = 48;
+		r = (char *)malloc(2);
+		r[0] = '0';
+		r[1] = 0;
+		return (r);
 	}
+	r = (char *)malloc(len * sizeof(char) + 1);
+	if (!r)
+		return (NULL);
+	r[len--] = 0;
+	nb = n;
 	if (nb < 0)
 	{
-		str[0] = '-';
-		nb = nb * -1;
+		nb *= -1;
+		r[0] = '-';
 	}
-	while (nb > 0)
-		str[i--] = nb % 10 + '0';
-		nb = nb / 10;
-	return (str);
+	ft_nbr(nb, len, r);
+	return (r);
 }	
