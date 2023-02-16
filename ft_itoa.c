@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 12:13:02 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/09 17:45:37 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/16 14:45:58 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_nbr(long long n, int len, char *r)
 {
-
 	while (n)
 	{
 		r[len--] = 48 + (n % 10);
