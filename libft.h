@@ -6,7 +6,7 @@
 /*   By: mmiro-go <mmiro-go@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:29:15 by mmiro-go          #+#    #+#             */
-/*   Updated: 2023/02/09 18:39:15 by mmiro-go         ###   ########.fr       */
+/*   Updated: 2023/02/16 20:21:15 by mmiro-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-size_t	ft_strcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 t_list	*ft_lstnew(void *content);
